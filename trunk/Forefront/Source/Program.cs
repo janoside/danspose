@@ -9,9 +9,7 @@ namespace Forefront {
 
 		[STAThread]
 		public static void Main() {
-			ForefrontForm form = new ForefrontForm(
-				new string[] { "Mozilla Firefox/Mozilla Firefox", "Microsoft Visual/Visual Studio" }
-			);
+			ForefrontForm form = new ForefrontForm();
 
 			try {
 

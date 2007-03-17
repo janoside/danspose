@@ -48,12 +48,10 @@ namespace ForefrontLauncher {
 			this.label6 = new System.Windows.Forms.Label();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.ValueThumbnailOpacity = new System.Windows.Forms.NumericUpDown();
 			this.label5 = new System.Windows.Forms.Label();
 			this.ValueBackgroundOpacity = new System.Windows.Forms.NumericUpDown();
 			this.label7 = new System.Windows.Forms.Label();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.ValueBorderHeight = new System.Windows.Forms.NumericUpDown();
 			this.label4 = new System.Windows.Forms.Label();
 			this.ValueBorderWidth = new System.Windows.Forms.NumericUpDown();
@@ -66,20 +64,13 @@ namespace ForefrontLauncher {
 			this.PanelTriggerHeaderSeparator = new System.Windows.Forms.Panel();
 			this.label12 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
 			this.ToolStripTriggers = new System.Windows.Forms.ToolStrip();
 			this.ButtonNewTrigger = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.ButtonDeleteTrigger = new System.Windows.Forms.ToolStripButton();
-			this.label8 = new System.Windows.Forms.Label();
 			this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 			this.ButtonCancel = new System.Windows.Forms.Button();
-			this.groupBox5 = new System.Windows.Forms.GroupBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
-			this.label13 = new System.Windows.Forms.Label();
-			this.label14 = new System.Windows.Forms.Label();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.ValueAnimationLength)).BeginInit();
 			this.tabControl1.SuspendLayout();
 			this.tabPage4.SuspendLayout();
@@ -90,10 +81,8 @@ namespace ForefrontLauncher {
 			this.ToolStripGroups.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.panel1.SuspendLayout();
-			this.groupBox2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.ValueThumbnailOpacity)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ValueBackgroundOpacity)).BeginInit();
-			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.ValueBorderHeight)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ValueBorderWidth)).BeginInit();
 			this.tabPage2.SuspendLayout();
@@ -101,7 +90,6 @@ namespace ForefrontLauncher {
 			this.groupBox4.SuspendLayout();
 			this.panel7.SuspendLayout();
 			this.ToolStripTriggers.SuspendLayout();
-			this.groupBox5.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// ButtonOk
@@ -118,7 +106,7 @@ namespace ForefrontLauncher {
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(174, 278);
+			this.label1.Location = new System.Drawing.Point(97, 270);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(122, 13);
 			this.label1.TabIndex = 3;
@@ -126,8 +114,7 @@ namespace ForefrontLauncher {
 			// 
 			// ValueAnimationLength
 			// 
-			this.ValueAnimationLength.ContextMenu = null;
-			this.ValueAnimationLength.Location = new System.Drawing.Point(302, 276);
+			this.ValueAnimationLength.Location = new System.Drawing.Point(225, 268);
 			this.ValueAnimationLength.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -245,7 +232,6 @@ namespace ForefrontLauncher {
 			this.DataGridGroups.Location = new System.Drawing.Point(191, 152);
 			this.DataGridGroups.MultiSelect = false;
 			this.DataGridGroups.Name = "DataGridGroups";
-			this.DataGridGroups.RowTemplate.Selected = false;
 			this.DataGridGroups.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.DataGridGroups.Size = new System.Drawing.Size(278, 166);
 			this.DataGridGroups.TabIndex = 0;
@@ -343,11 +329,16 @@ namespace ForefrontLauncher {
 			// 
 			// panel1
 			// 
-			this.panel1.Controls.Add(this.groupBox2);
-			this.panel1.Controls.Add(this.groupBox1);
+			this.panel1.Controls.Add(this.ValueThumbnailOpacity);
+			this.panel1.Controls.Add(this.label5);
+			this.panel1.Controls.Add(this.ValueBorderHeight);
+			this.panel1.Controls.Add(this.ValueBackgroundOpacity);
+			this.panel1.Controls.Add(this.label7);
+			this.panel1.Controls.Add(this.label4);
+			this.panel1.Controls.Add(this.ValueBorderWidth);
 			this.panel1.Controls.Add(this.label1);
+			this.panel1.Controls.Add(this.label3);
 			this.panel1.Controls.Add(this.ValueAnimationLength);
-			this.panel1.Controls.Add(this.groupBox5);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel1.Location = new System.Drawing.Point(3, 3);
 			this.panel1.Name = "panel1";
@@ -355,30 +346,15 @@ namespace ForefrontLauncher {
 			this.panel1.Size = new System.Drawing.Size(466, 345);
 			this.panel1.TabIndex = 6;
 			// 
-			// groupBox2
-			// 
-			this.groupBox2.Controls.Add(this.ValueThumbnailOpacity);
-			this.groupBox2.Controls.Add(this.label5);
-			this.groupBox2.Controls.Add(this.ValueBackgroundOpacity);
-			this.groupBox2.Controls.Add(this.label7);
-			this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.groupBox2.Location = new System.Drawing.Point(3, 165);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(460, 80);
-			this.groupBox2.TabIndex = 6;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Opacity";
-			// 
 			// ValueThumbnailOpacity
 			// 
-			this.ValueThumbnailOpacity.ContextMenu = null;
 			this.ValueThumbnailOpacity.DecimalPlaces = 2;
 			this.ValueThumbnailOpacity.Increment = new decimal(new int[] {
             5,
             0,
             0,
             131072});
-			this.ValueThumbnailOpacity.Location = new System.Drawing.Point(299, 32);
+			this.ValueThumbnailOpacity.Location = new System.Drawing.Point(225, 215);
 			this.ValueThumbnailOpacity.Maximum = new decimal(new int[] {
             1,
             0,
@@ -397,22 +373,21 @@ namespace ForefrontLauncher {
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(227, 34);
+			this.label5.Location = new System.Drawing.Point(116, 217);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(66, 13);
+			this.label5.Size = new System.Drawing.Size(103, 13);
 			this.label5.TabIndex = 6;
-			this.label5.Text = "Thumbnails";
+			this.label5.Text = "Thumbnail Opacity";
 			// 
 			// ValueBackgroundOpacity
 			// 
-			this.ValueBackgroundOpacity.ContextMenu = null;
 			this.ValueBackgroundOpacity.DecimalPlaces = 2;
 			this.ValueBackgroundOpacity.Increment = new decimal(new int[] {
             5,
             0,
             0,
             131072});
-			this.ValueBackgroundOpacity.Location = new System.Drawing.Point(82, 32);
+			this.ValueBackgroundOpacity.Location = new System.Drawing.Point(225, 158);
 			this.ValueBackgroundOpacity.Maximum = new decimal(new int[] {
             1,
             0,
@@ -431,30 +406,15 @@ namespace ForefrontLauncher {
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(6, 34);
+			this.label7.Location = new System.Drawing.Point(107, 160);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(70, 13);
+			this.label7.Size = new System.Drawing.Size(112, 13);
 			this.label7.TabIndex = 4;
-			this.label7.Text = "Background";
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.Controls.Add(this.ValueBorderHeight);
-			this.groupBox1.Controls.Add(this.label4);
-			this.groupBox1.Controls.Add(this.ValueBorderWidth);
-			this.groupBox1.Controls.Add(this.label3);
-			this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.groupBox1.Location = new System.Drawing.Point(3, 85);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(460, 80);
-			this.groupBox1.TabIndex = 5;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Thumbnail Borders";
+			this.label7.Text = "Background Opacity";
 			// 
 			// ValueBorderHeight
 			// 
-			this.ValueBorderHeight.ContextMenu = null;
-			this.ValueBorderHeight.Location = new System.Drawing.Point(299, 31);
+			this.ValueBorderHeight.Location = new System.Drawing.Point(225, 101);
 			this.ValueBorderHeight.Minimum = new decimal(new int[] {
             5,
             0,
@@ -473,16 +433,15 @@ namespace ForefrontLauncher {
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(251, 33);
+			this.label4.Location = new System.Drawing.Point(82, 103);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(42, 13);
+			this.label4.Size = new System.Drawing.Size(137, 13);
 			this.label4.TabIndex = 6;
-			this.label4.Text = "Height";
+			this.label4.Text = "Thumbnail Border Height";
 			// 
 			// ValueBorderWidth
 			// 
-			this.ValueBorderWidth.ContextMenu = null;
-			this.ValueBorderWidth.Location = new System.Drawing.Point(82, 31);
+			this.ValueBorderWidth.Location = new System.Drawing.Point(225, 46);
 			this.ValueBorderWidth.Minimum = new decimal(new int[] {
             5,
             0,
@@ -501,11 +460,11 @@ namespace ForefrontLauncher {
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(37, 33);
+			this.label3.Location = new System.Drawing.Point(85, 48);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(39, 13);
+			this.label3.Size = new System.Drawing.Size(134, 13);
 			this.label3.TabIndex = 4;
-			this.label3.Text = "Width";
+			this.label3.Text = "Thumbnail Border Width";
 			// 
 			// tabPage2
 			// 
@@ -591,6 +550,16 @@ namespace ForefrontLauncher {
 			this.label11.TabIndex = 1;
 			this.label11.Text = "Trigger Value:";
 			// 
+			// label8
+			// 
+			this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label8.Location = new System.Drawing.Point(3, 3);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(466, 36);
+			this.label8.TabIndex = 2;
+			this.label8.Text = "Triggers activate Forefront\'s window-selection mode.  Create any number of key-pr" +
+				"ess or mouse-in-corner triggers as you desire.";
+			// 
 			// ToolStripTriggers
 			// 
 			this.ToolStripTriggers.AutoSize = false;
@@ -632,16 +601,6 @@ namespace ForefrontLauncher {
 			this.ButtonDeleteTrigger.Text = "Delete Trigger";
 			this.ButtonDeleteTrigger.Click += new System.EventHandler(this.ButtonDeleteTriggerClick);
 			// 
-			// label8
-			// 
-			this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label8.Location = new System.Drawing.Point(3, 3);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(466, 36);
-			this.label8.TabIndex = 2;
-			this.label8.Text = "Triggers activate Forefront\'s window-selection mode.  Create any number of key-pr" +
-				"ess or mouse-in-corner triggers as you desire.";
-			// 
 			// imageList1
 			// 
 			this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -659,76 +618,6 @@ namespace ForefrontLauncher {
 			this.ButtonCancel.Text = "Cancel";
 			this.ButtonCancel.UseVisualStyleBackColor = true;
 			this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
-			// 
-			// groupBox5
-			// 
-			this.groupBox5.Controls.Add(this.button3);
-			this.groupBox5.Controls.Add(this.button2);
-			this.groupBox5.Controls.Add(this.label14);
-			this.groupBox5.Controls.Add(this.label13);
-			this.groupBox5.Controls.Add(this.button1);
-			this.groupBox5.Controls.Add(this.label2);
-			this.groupBox5.Dock = System.Windows.Forms.DockStyle.Top;
-			this.groupBox5.Location = new System.Drawing.Point(3, 3);
-			this.groupBox5.Name = "groupBox5";
-			this.groupBox5.Size = new System.Drawing.Size(460, 82);
-			this.groupBox5.TabIndex = 7;
-			this.groupBox5.TabStop = false;
-			this.groupBox5.Text = "Window Labels";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(45, 39);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(31, 13);
-			this.label2.TabIndex = 5;
-			this.label2.Text = "Font";
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(82, 34);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(120, 23);
-			this.button1.TabIndex = 6;
-			this.button1.Text = "button1";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.Location = new System.Drawing.Point(232, 24);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(61, 13);
-			this.label13.TabIndex = 7;
-			this.label13.Text = "Fore Color";
-			// 
-			// label14
-			// 
-			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(231, 54);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(62, 13);
-			this.label14.TabIndex = 8;
-			this.label14.Text = "Back Color";
-			// 
-			// button2
-			// 
-			this.button2.BackColor = System.Drawing.Color.Black;
-			this.button2.Location = new System.Drawing.Point(299, 19);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(120, 23);
-			this.button2.TabIndex = 9;
-			this.button2.UseVisualStyleBackColor = false;
-			// 
-			// button3
-			// 
-			this.button3.BackColor = System.Drawing.Color.White;
-			this.button3.Location = new System.Drawing.Point(299, 49);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(120, 23);
-			this.button3.TabIndex = 10;
-			this.button3.UseVisualStyleBackColor = false;
 			// 
 			// SettingsForm
 			// 
@@ -760,12 +649,8 @@ namespace ForefrontLauncher {
 			this.tabPage1.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
-			this.groupBox2.ResumeLayout(false);
-			this.groupBox2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.ValueThumbnailOpacity)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.ValueBackgroundOpacity)).EndInit();
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.ValueBorderHeight)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.ValueBorderWidth)).EndInit();
 			this.tabPage2.ResumeLayout(false);
@@ -775,8 +660,6 @@ namespace ForefrontLauncher {
 			this.panel7.PerformLayout();
 			this.ToolStripTriggers.ResumeLayout(false);
 			this.ToolStripTriggers.PerformLayout();
-			this.groupBox5.ResumeLayout(false);
-			this.groupBox5.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -795,12 +678,10 @@ namespace ForefrontLauncher {
 		private System.Windows.Forms.Panel PanelGroupBack;
 		private System.Windows.Forms.ImageList imageList1;
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.NumericUpDown ValueBorderWidth;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.NumericUpDown ValueBorderHeight;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.NumericUpDown ValueThumbnailOpacity;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.NumericUpDown ValueBackgroundOpacity;
@@ -831,12 +712,5 @@ namespace ForefrontLauncher {
 		private System.Windows.Forms.Panel panel7;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.Label label12;
-		private System.Windows.Forms.GroupBox groupBox5;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Label label14;
-		private System.Windows.Forms.Label label13;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button2;
 	}
 }

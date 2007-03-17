@@ -23,7 +23,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <PublishUrl>Publish\</PublishUrl>
     <ApplicationIcon>Resources\ForefrontIcon.ico</ApplicationIcon>
-    <StartupObject>ForefrontLauncher.App</StartupObject>
+    <StartupObject>ForefrontLauncher.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,13 +62,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="Source\App.xaml" />
-    <Compile Include="Source\App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Source\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +83,8 @@
     <Compile Include="Source\GroupPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Source\Launcher.cs" />
+    <Compile Include="Source\Program.cs" />
     <Compile Include="Source\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>

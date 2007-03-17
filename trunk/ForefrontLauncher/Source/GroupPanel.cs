@@ -35,9 +35,7 @@ namespace ForefrontLauncher {
 				this.fGroupString = value;
 
 				this.fName = value.Substring(value.IndexOf("/") + 1);
-				//this.LabelName.Text = this.fName;
 				this.fMatches = value.Substring(0, value.IndexOf("/")).Replace(",", "\n");
-				//this.LabelMatches.Text = this.fMatches;
 
 				this.Height = (int)this.CreateGraphics().MeasureString(this.fMatches, this.Font).Height + 12;
 			}

@@ -449,6 +449,8 @@ namespace Triggers {
 		/// </summary>
 		private int hKeyboardHook = 0;
 
+		private bool fIsActive;
+
 		/// <summary>
 		/// Creates an instance of UserActivityHook object and installs both or one of mouse and/or keyboard hooks and starts rasing events
 		/// </summary>
@@ -462,6 +464,8 @@ namespace Triggers {
 			this.fMouseListeners = new List<IMouseListener>();
 			this.fKeyboardListeners = new List<IKeyboardListener>();
 
+			this.fIsActive = true;
+
 			this.Start(InstallMouseHook, InstallKeyboardHook);
 		}
 
@@ -473,22 +477,14 @@ namespace Triggers {
 			this.Stop(true, true, false);
 		}
 
-		/// <summary>
-		/// Occurs when the user moves the mouse, presses any mouse button or scrolls the wheel
-		/// </summary>
-		//public event MouseEventHandler OnMouseActivity;
-		/// <summary>
-		/// Occurs when the user presses a key
-		/// </summary>
-		//public event KeyEventHandler KeyDown;
-		/// <summary>
-		/// Occurs when the user presses and releases 
-		/// </summary>
-		//public event KeyPressEventHandler KeyPress;
-		/// <summary>
-		/// Occurs when the user releases a key
-		/// </summary>
-		//public event KeyEventHandler KeyUp;
+		public bool IsActive {
+			get {
+				return this.fIsActive;
+			}
+			set {
+				this.fIsActive = value;
+			}
+		}
 
 		public void ClearListeners() {
 			this.fMouseListeners.Clear();
@@ -685,9 +681,11 @@ namespace Triggers {
 												   mouseHookStruct.pt.x,
 												   mouseHookStruct.pt.y,
 												   mouseDelta);
-				//raise it
-				foreach ( IMouseListener mouseListener in this.fMouseListeners ) {
-					mouseListener.OnMouseActivity(e);
+				// notify listeners
+				if ( this.fIsActive ) {
+					foreach ( IMouseListener mouseListener in this.fMouseListeners ) {
+						mouseListener.OnMouseActivity(e);
+					}
 				}
 			}
 
@@ -731,8 +729,11 @@ namespace Triggers {
 				if ( this.fKeyboardListeners.Count > 0 && (wParam == WM_KEYUP || wParam == WM_SYSKEYUP) ) {
 					Keys keyData = (Keys)MyKeyboardHookStruct.vkCode;
 					KeyEventArgs e = new KeyEventArgs(keyData);
-					foreach ( IKeyboardListener keyListener in this.fKeyboardListeners ) {
-						keyListener.OnKeyUp(e);
+
+					if ( this.fIsActive ) {
+						foreach ( IKeyboardListener keyListener in this.fKeyboardListeners ) {
+							keyListener.OnKeyUp(e);
+						}
 					}
 					handled = handled || e.Handled;
 				}

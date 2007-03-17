@@ -13,7 +13,7 @@ namespace ForefrontLauncher {
 
 	public partial class SettingsForm : Form {
 
-		private App fApp;
+		private Launcher fLauncher;
 
 		private GroupPanel fSelectedGroupPanel;
 
@@ -21,10 +21,8 @@ namespace ForefrontLauncher {
 
 		private List<Control> fGroupControls;
 
-		private object val;
-
-		public SettingsForm(App app) {
-			this.fApp = app;
+		public SettingsForm(Launcher launcher) {
+			this.fLauncher = launcher;
 			this.fGroupControls = new List<Control>();
 
 			InitializeComponent();
@@ -33,25 +31,11 @@ namespace ForefrontLauncher {
 		protected override void OnLoad(EventArgs e) {
 			base.OnLoad(e);
 
-			DataTable groupTable = new DataTable();
-			groupTable.Columns.Add("String(s) to Match", typeof(string));
-			groupTable.Columns.Add("Group Name", typeof(string));
-
-		//	DataTable triggerTable = new DataTable();
-		//	triggerTable.Columns.Add("Trigger Type", typeof(TriggerType));
-		//	triggerTable.Columns.Add("Trigger Value", typeof(string));
-
 			ConfigurationSettings settings = SerializationUtility.DeserializeXmlObject<ConfigurationSettings>(Application.StartupPath + "\\Settings.xml");
 			foreach ( string group in settings.Groups ) {
-				DataRow dr = groupTable.NewRow();
-				dr["String(s) to Match"] = group.Substring(0, group.IndexOf("/")).Replace(",", "\n");
-				dr["Group Name"] = group.Substring(group.IndexOf("/") + 1);
-				groupTable.Rows.Add(dr);
-
 				this.AddGroup(group);
 			}
 
-			int triggerIndex = 0;
 			foreach ( string trigger in settings.Triggers ) {
 				this.AddTrigger(trigger);
 			}
@@ -122,10 +106,6 @@ namespace ForefrontLauncher {
 		private void ButtonOk_Click(object sender, EventArgs e) {
 			ConfigurationSettings settings = new ConfigurationSettings();
 			
-		//	DataTable groupTable = (DataTable)this.DataGridGroups.DataSource;
-		//	foreach ( DataRow dr in groupTable.Rows ) {
-		//		settings.Groups.Add(dr[0].ToString() + "/" + dr[1].ToString());
-		//	}
 			foreach ( Control c in this.fGroupControls ) {
 				settings.Groups.Add(((GroupPanel)c).GroupString);
 			}
@@ -133,14 +113,6 @@ namespace ForefrontLauncher {
 			foreach ( Control c in this.PanelTriggerList.Controls ) {
 				settings.Triggers.Add(((TriggerPanel)c).TriggerString);
 			}
-
-			//DataTable triggerTable = (DataTable)this.DataGridTriggers.DataSource;
-			//foreach ( DataRow dr in triggerTable.Rows ) {
-			//	settings.Triggers.Add(dr[0].ToString() + " " + dr[1].ToString());
-			//}
-		//	for ( int i = 0; i < this.DataGridTriggers.Rows.Count - 1; i++ ) {
-		//		settings.Triggers.Add(this.DataGridTriggers.Rows[i].Cells[0].Value.ToString() + " " + this.DataGridTriggers.Rows[i].Cells[1].Value.ToString());
-		//	}
 
 			settings.AnimationLength = (float)this.ValueAnimationLength.Value / 1000.0f;
 			settings.BackgroundOpacity = (float)this.ValueBackgroundOpacity.Value;
@@ -150,7 +122,7 @@ namespace ForefrontLauncher {
 
 			SerializationUtility.SaveObjectToFile(settings, Application.StartupPath + "\\Settings.xml");
 
-			this.fApp.LoadSettings();
+			this.fLauncher.LoadSettings();
 
 			this.Close();
 		}
@@ -158,38 +130,6 @@ namespace ForefrontLauncher {
 		private void ButtonCancel_Click(object sender, EventArgs e) {
 			this.Close();
 		}
-
-		/*private void ButtonGroupUpClick(object sender, EventArgs e) {
-			DataTable dt = (DataTable)this.DataGridGroups.DataSource;
-			int index = this.DataGridGroups.SelectedRows[0].Index;
-
-			if ( index > 0 ) {
-				object[] items = dt.Rows[index].ItemArray;
-				dt.Rows.RemoveAt(index);
-				DataRow dr = dt.NewRow();
-				dr.ItemArray = items;
-				dt.Rows.InsertAt(dr, index - 1);
-
-				this.DataGridGroups.DataSource = dt;
-				this.DataGridGroups.Rows[index - 1].Selected = true;
-			}
-		}
-
-		private void ButtonGroupDownClick(object sender, EventArgs e) {
-			DataTable dt = (DataTable)this.DataGridGroups.DataSource;
-			int index = this.DataGridGroups.SelectedRows[0].Index;
-
-			if ( index < (this.DataGridGroups.Rows.Count - 2) ) {
-				object[] items = dt.Rows[index].ItemArray;
-				dt.Rows.RemoveAt(index);
-				DataRow dr = dt.NewRow();
-				dr.ItemArray = items;
-				dt.Rows.InsertAt(dr, index + 1);
-
-				this.DataGridGroups.DataSource = dt;
-				this.DataGridGroups.Rows[index + 1].Selected = true;
-			}
-		}*/
 
 		protected override void OnPaint(PaintEventArgs e) {
 			e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;

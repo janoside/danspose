@@ -42,14 +42,14 @@ namespace Forefront {
 
 		private bool fSkipShow;
 
-		public ForefrontForm(IEnumerable<string> groups) {
+		public ForefrontForm() {
 			this.fWindowManager = new VistaWindowManager(
 				new IntPtr[] { this.Handle },
-				groups);
+				new string[] { });
 
 			this.fSecondaryWindowManager = new VistaWindowManager(
 				new IntPtr[] { this.Handle },
-				groups);
+				new string[] { });
 
 			this.fThumbnailGrid = new ThumbnailGrid();
 
