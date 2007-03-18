@@ -116,6 +116,7 @@ namespace ForefrontLauncher {
 			this.MaximizeBox = false;
 			this.Name = "EditTriggerForm";
 			this.ShowIcon = false;
+			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Edit Trigger";
 			this.ResumeLayout(false);

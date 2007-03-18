@@ -110,6 +110,7 @@ namespace ForefrontLauncher {
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "AboutForm";
+			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "About Forefront";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
