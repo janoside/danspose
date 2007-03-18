@@ -50,9 +50,9 @@ namespace ForefrontLauncher {
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.ValueThumbnailOpacity = new System.Windows.Forms.NumericUpDown();
 			this.label5 = new System.Windows.Forms.Label();
+			this.ValueBorderHeight = new System.Windows.Forms.NumericUpDown();
 			this.ValueBackgroundOpacity = new System.Windows.Forms.NumericUpDown();
 			this.label7 = new System.Windows.Forms.Label();
-			this.ValueBorderHeight = new System.Windows.Forms.NumericUpDown();
 			this.label4 = new System.Windows.Forms.Label();
 			this.ValueBorderWidth = new System.Windows.Forms.NumericUpDown();
 			this.label3 = new System.Windows.Forms.Label();
@@ -82,8 +82,8 @@ namespace ForefrontLauncher {
 			this.tabPage1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.ValueThumbnailOpacity)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.ValueBackgroundOpacity)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ValueBorderHeight)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.ValueBackgroundOpacity)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ValueBorderWidth)).BeginInit();
 			this.tabPage2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -379,6 +379,24 @@ namespace ForefrontLauncher {
 			this.label5.TabIndex = 6;
 			this.label5.Text = "Thumbnail Opacity";
 			// 
+			// ValueBorderHeight
+			// 
+			this.ValueBorderHeight.Location = new System.Drawing.Point(225, 101);
+			this.ValueBorderHeight.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+			this.ValueBorderHeight.Name = "ValueBorderHeight";
+			this.ValueBorderHeight.Size = new System.Drawing.Size(120, 22);
+			this.ValueBorderHeight.TabIndex = 7;
+			this.ValueBorderHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.ValueBorderHeight.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+			// 
 			// ValueBackgroundOpacity
 			// 
 			this.ValueBackgroundOpacity.DecimalPlaces = 2;
@@ -411,24 +429,6 @@ namespace ForefrontLauncher {
 			this.label7.Size = new System.Drawing.Size(112, 13);
 			this.label7.TabIndex = 4;
 			this.label7.Text = "Background Opacity";
-			// 
-			// ValueBorderHeight
-			// 
-			this.ValueBorderHeight.Location = new System.Drawing.Point(225, 101);
-			this.ValueBorderHeight.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-			this.ValueBorderHeight.Name = "ValueBorderHeight";
-			this.ValueBorderHeight.Size = new System.Drawing.Size(120, 22);
-			this.ValueBorderHeight.TabIndex = 7;
-			this.ValueBorderHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.ValueBorderHeight.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
 			// 
 			// label4
 			// 
@@ -634,6 +634,8 @@ namespace ForefrontLauncher {
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "SettingsForm";
+			this.ShowIcon = false;
+			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Forefront Settings";
 			((System.ComponentModel.ISupportInitialize)(this.ValueAnimationLength)).EndInit();
@@ -650,8 +652,8 @@ namespace ForefrontLauncher {
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.ValueThumbnailOpacity)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.ValueBackgroundOpacity)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.ValueBorderHeight)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.ValueBackgroundOpacity)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.ValueBorderWidth)).EndInit();
 			this.tabPage2.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);

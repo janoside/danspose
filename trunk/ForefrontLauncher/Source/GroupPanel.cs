@@ -37,7 +37,7 @@ namespace ForefrontLauncher {
 				this.fName = value.Substring(value.IndexOf("/") + 1);
 				this.fMatches = value.Substring(0, value.IndexOf("/")).Replace(",", "\n");
 
-				this.Height = (int)this.CreateGraphics().MeasureString(this.fMatches, this.Font).Height + 12;
+				this.Height = (int)this.CreateGraphics().MeasureString(this.fMatches, this.Font).Height + 6 + (int)(2.6f * this.fMatches.Split('\n').Length);
 			}
 		}
 
