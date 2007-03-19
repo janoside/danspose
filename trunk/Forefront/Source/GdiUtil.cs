@@ -69,5 +69,24 @@ namespace Forefront {
 
 			return bmp;
 		}
+
+		public static GraphicsPath CreateRoundedRectangle(int x, int y, int w, int h, int radius) {
+			GraphicsPath gp = new GraphicsPath();
+
+			gp.AddLine(x + radius, y, x + w - radius, y);
+			gp.AddArc(x + w - 2 * radius, y, 2 * radius, 2 * radius, 270, 90);
+			gp.AddLine(x + w, y + radius, x + w, y + h - radius);
+			gp.AddArc(x + w - 2 * radius, y + h - 2 * radius, 2 * radius, 2 * radius, 0, 90);
+			gp.AddLine(x + w - radius, y + h, x + radius, y + h);
+			gp.AddArc(x, y + h - 2 * radius, 2 * radius, 2 * radius, 90, 90);
+			gp.AddLine(x, y + h - radius, x, y + radius);
+			gp.AddArc(x, y, 2 * radius, 2 * radius, 180, 90);
+
+			return gp;
+		}
+
+		public static GraphicsPath CreateRoundedRectangle(float x, float y, float w, float h, float radius) {
+			return CreateRoundedRectangle((int)x, (int)y, (int)w, (int)h, (int)radius);
+		}
 	}
 }

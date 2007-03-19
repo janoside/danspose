@@ -80,7 +80,7 @@ namespace Forefront {
 			this.fAnimating = false;
 			this.fSkipShow = false;
 			this.fThumbnailOpacity = 0.5f;
-			this.fBackgroundOpacity = 0;//			0.2f;
+			this.fBackgroundOpacity = 0.2f;
 
 			this.SetStyle(ControlStyles.UserPaint, true);
 			this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
@@ -98,6 +98,12 @@ namespace Forefront {
 					this.Hide();
 				}
 			};
+		}
+
+		public TriggerManager TriggerManager {
+			get {
+				return this.fTriggerManager;
+			}
 		}
 
 		public float AnimationLength {
@@ -140,12 +146,6 @@ namespace Forefront {
 			}
 
 			return groups.ToArray();
-		}
-
-		public TriggerManager TriggerManager {
-			get {
-				return this.fTriggerManager;
-			}
 		}
 
 		protected override void OnShown(EventArgs e) {
@@ -214,23 +214,18 @@ namespace Forefront {
 		}
 
 		private void DrawHighlightRectangle(Graphics g, RectangleF textRect) {
-			GraphicsPath gp = new GraphicsPath();
-			int y = -2;
-
-			// corner size
-			int cs = 5;
-
 			int x = 15;
-			gp.AddLine(textRect.X - x, textRect.Y - y, textRect.X + textRect.Width + x, textRect.Y - y);
-			gp.AddArc(textRect.X + textRect.Width + x, textRect.Y - y, cs, cs, 270, 90);
-			gp.AddLine(textRect.X + textRect.Width + x + cs, textRect.Y - y + cs, textRect.X + textRect.Width + x + cs, textRect.Y + textRect.Height + y - cs);
-			gp.AddArc(textRect.X + textRect.Width + x, textRect.Y + textRect.Height + y - cs, cs, cs, 0, 90);
-			gp.AddLine(textRect.X + textRect.Width + x, textRect.Y + textRect.Height + y, textRect.X - x, textRect.Y + textRect.Height + y);
-			gp.AddArc(textRect.X - x - cs, textRect.Y + textRect.Height + y - cs, cs, cs, 90, 90);
-			gp.AddLine(textRect.X - x - cs, textRect.Y + textRect.Height + y - cs, textRect.X - x - cs, textRect.Y - y + cs);
-			gp.AddArc(textRect.X - x - cs, textRect.Y - y, cs, cs, 180, 90);
 
-			g.FillPath(Brushes.White, gp);
+			GraphicsPath roundedRect = GdiUtil.CreateRoundedRectangle(
+				textRect.X - x,
+				textRect.Y,
+				textRect.Width + 2 * x,
+				textRect.Height,
+				textRect.Height / 2.0f);
+
+			g.FillPath(
+				Brushes.White, 
+				roundedRect);
 		}
 
 		private void DrawLabels(Graphics g) {
@@ -419,15 +414,6 @@ namespace Forefront {
 			}
 
 			this.Invalidate();
-			/*
-			if ( this.fSelectedWindow != null ) {
-				Rectangle rect = this.fWindowRectangles[this.fSelectedWindow];
-				e.Graphics.FillRectangle(
-					new LinearGradientBrush(new Point(rect.Left, rect.Top), new Point(rect.Left+rect.Width, rect.Top+rect.Height), Color.White, Color.Black),
-					rect);
-			}
-
-			this.Invalidate();*/
 		}
 
 		protected override void OnMouseClick(MouseEventArgs e) {
