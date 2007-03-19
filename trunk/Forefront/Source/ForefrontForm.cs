@@ -231,16 +231,7 @@ namespace Forefront {
 		private void DrawLabels(Graphics g) {
 			if ( !this.fFocusedOnGroup ) {
 				foreach ( VistaWindowGroup group in this.fWindowManager.ActiveGroups ) {
-					Rectangle rect = new Rectangle(int.MaxValue, int.MaxValue, int.MinValue, int.MinValue);//					this.fThumbnailGrid.GetRectangle(group);
-
-					foreach ( VistaWindow vw in group.Windows ) {
-						Rectangle vwRect = Utility.RectangleFromRect(vw.VisibleRectangle);
-
-						rect.X = Math.Min(rect.X, vwRect.Left);
-						rect.Y = Math.Min(rect.Y, vwRect.Top);
-						rect.Width = Math.Max(rect.X + rect.Width, vwRect.Right) - rect.X;
-						rect.Height = Math.Max(rect.Y + rect.Height, vwRect.Bottom) - rect.Y;
-					}
+					Rectangle rect = rect = this.fThumbnailGrid.GetRectangle(group);
 
 					SizeF size = g.MeasureString(group.Name, this.Font);
 
@@ -315,93 +306,11 @@ namespace Forefront {
 		protected override void OnPaint(PaintEventArgs e) {
 			base.OnPaint(e);
 
-			//e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
 			e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
 
 			Graphics g = e.Graphics;
 
-			if ( !this.fFocusedOnGroup ) {
-				foreach ( VistaWindowGroup group in this.fWindowManager.ActiveGroups ) {
-					Rectangle rect = new Rectangle(int.MaxValue, int.MaxValue, int.MinValue, int.MinValue);//					this.fThumbnailGrid.GetRectangle(group);
-					rect = this.fThumbnailGrid.GetRectangle(group);
-
-					/*foreach ( VistaWindow vw in group.Windows ) {
-						Rectangle vwRect = Utility.RectangleFromRect(vw.VisibleRectangle);
-
-						rect.X = Math.Min(rect.X, vwRect.Left);
-						rect.Y = Math.Min(rect.Y, vwRect.Top);
-						rect.Width = Math.Max(rect.X + rect.Width, vwRect.Right) - rect.X;
-						rect.Height = Math.Max(rect.Y + rect.Height, vwRect.Bottom) - rect.Y;
-					}*/
-
-					SizeF size = g.MeasureString(group.Name, this.Font);
-
-					if ( size.Width > rect.Width - 25 ) {
-						size.Width = rect.Width - 25;
-					}
-
-					RectangleF textRect = new RectangleF(
-						rect.X + (rect.Width - size.Width) / 2,
-						rect.Y + rect.Height,
-						size.Width,
-						size.Height);
-
-					this.DrawHighlightRectangle(g, textRect);
-
-					g.DrawString(
-						group.Name,
-						this.Font,
-						Brushes.Black,
-						textRect);
-				}
-				foreach ( VistaWindow vw in this.fWindowManager.Windows ) {
-					SizeF size = g.MeasureString(vw.Title, this.Font);
-
-					int width = vw.Rectangle.Right - vw.Rectangle.Left;
-					int height = vw.Rectangle.Bottom - vw.Rectangle.Top;
-					if ( size.Width > width - 25 ) {
-						size.Width = width - 25;
-					}
-
-					RectangleF textRect = new RectangleF(
-						vw.Rectangle.Left + (width - size.Width) / 2,
-						vw.Rectangle.Bottom - (height - vw.ScaledSize.Y) / 2,
-						size.Width,
-						size.Height);
-
-					this.DrawHighlightRectangle(g, textRect);
-
-					g.DrawString(
-						vw.Title,
-						this.Font,
-						Brushes.Black,
-						textRect);
-				}
-			} else {
-				foreach ( VistaWindow vw in this.fSecondaryWindowManager.Windows ) {
-					SizeF size = g.MeasureString(vw.Title, this.Font);
-
-					int width = vw.Rectangle.Right - vw.Rectangle.Left;
-					int height = vw.Rectangle.Bottom - vw.Rectangle.Top;
-					if ( size.Width > width - 25 ) {
-						size.Width = width - 25;
-					}
-
-					RectangleF textRect = new RectangleF(
-						vw.Rectangle.Left + (width - size.Width) / 2,
-						vw.Rectangle.Bottom - (height - vw.ScaledSize.Y) / 2,
-						size.Width,
-						size.Height);
-
-					this.DrawHighlightRectangle(g, textRect);
-
-					g.DrawString(
-						vw.Title,
-						this.Font,
-						Brushes.Black,
-						textRect);
-				}
-			}
+			this.DrawLabels(g);
 
 			this.fAnimation.Update();
 			foreach ( ITransition transition in this.fWindowTransitions ) {
