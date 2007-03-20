@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:ForefrontSetup"
+"ProjectName" = "8:DansposéSetup"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -17,12 +17,6 @@
         {
         "MsmKey" = "8:_06035AF82F81C720BAF34D4E3D456185"
         "OwnerKey" = "8:_0DCD126102C182434AC9C529076EE04A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_06035AF82F81C720BAF34D4E3D456185"
-        "OwnerKey" = "8:_C4A1841B6D19D052F61A23D0A9E99BDB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -141,24 +135,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_159D5AD5AFB2AC58B6BBCC4684D303FC"
-        "OwnerKey" = "8:_C4A1841B6D19D052F61A23D0A9E99BDB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_27622BC878BB2ADAB111B5B9DC7BF2D4"
-        "OwnerKey" = "8:_9CFED393B6C1748C630F66B0A031A905"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_27622BC878BB2ADAB111B5B9DC7BF2D4"
-        "OwnerKey" = "8:_C83A823711C345268F8309C836CDFC98"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2C7BEF06BBCCF7557E95D3930CC70D87"
         "OwnerKey" = "8:_E8C73E3E22D4E04E718AA4CC53347820"
         "MsmSig" = "8:_UNDEFINED"
@@ -207,8 +183,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_3B41CCFCF5AA4132A484CB9EDF7852DC"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_320D9B355AEA2228ABB4ED4614503002"
+        "OwnerKey" = "8:_C83A823711C345268F8309C836CDFC98"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -297,25 +273,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_637877BB0F5E400FB7AD7CACB56EBC78"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_7665815CF508FD7B00EFEE16787C314B"
         "OwnerKey" = "8:_C64DF991F35B695F06BABD68578B5830"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_787E16B20CFF422BED6FAED4DCF059E0"
-        "OwnerKey" = "8:_27622BC878BB2ADAB111B5B9DC7BF2D4"
+        "MsmKey" = "8:_77CDA1C97BD3A288782FE166D454FC96"
+        "OwnerKey" = "8:_E70480649D82B4ED1B2163DCA531E277"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_787E16B20CFF422BED6FAED4DCF059E0"
+        "MsmKey" = "8:_77CDA1C97BD3A288782FE166D454FC96"
         "OwnerKey" = "8:_C83A823711C345268F8309C836CDFC98"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -327,14 +297,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_85415D4DB89C15BBAA2D23A81E00A551"
-        "OwnerKey" = "8:_4A2E2F4C0664E5C8F02B4ADFC014C34D"
+        "MsmKey" = "8:_7BAAAB7F29FE7CADEF162C28CFA8EE4E"
+        "OwnerKey" = "8:_320D9B355AEA2228ABB4ED4614503002"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7BAAAB7F29FE7CADEF162C28CFA8EE4E"
+        "OwnerKey" = "8:_C83A823711C345268F8309C836CDFC98"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_85415D4DB89C15BBAA2D23A81E00A551"
-        "OwnerKey" = "8:_C4A1841B6D19D052F61A23D0A9E99BDB"
+        "OwnerKey" = "8:_4A2E2F4C0664E5C8F02B4ADFC014C34D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -417,20 +393,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_92237A3ED42C1EC2328AF60A919914DE"
-        "OwnerKey" = "8:_C4A1841B6D19D052F61A23D0A9E99BDB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_92237A3ED42C1EC2328AF60A919914DE"
-        "OwnerKey" = "8:_C83A823711C345268F8309C836CDFC98"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9CFED393B6C1748C630F66B0A031A905"
-        "OwnerKey" = "8:_C83A823711C345268F8309C836CDFC98"
+        "MsmKey" = "8:_907C3C8059314125A00A6BE8FD119275"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -441,19 +405,13 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_AAC193CF7B764A5588F34F11D603C28D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_AD6E3E69C21DEB85697B4179EEE3F213"
-        "OwnerKey" = "8:_C83A823711C345268F8309C836CDFC98"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C4A1841B6D19D052F61A23D0A9E99BDB"
-        "OwnerKey" = "8:_9CFED393B6C1748C630F66B0A031A905"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C4A1841B6D19D052F61A23D0A9E99BDB"
         "OwnerKey" = "8:_C83A823711C345268F8309C836CDFC98"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -496,19 +454,25 @@
         "Entry"
         {
         "MsmKey" = "8:_E173B637709B85A947816B0CD0B77D46"
-        "OwnerKey" = "8:_787E16B20CFF422BED6FAED4DCF059E0"
+        "OwnerKey" = "8:_77CDA1C97BD3A288782FE166D454FC96"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E70480649D82B4ED1B2163DCA531E277"
+        "OwnerKey" = "8:_320D9B355AEA2228ABB4ED4614503002"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E70480649D82B4ED1B2163DCA531E277"
+        "OwnerKey" = "8:_C83A823711C345268F8309C836CDFC98"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_E8C73E3E22D4E04E718AA4CC53347820"
         "OwnerKey" = "8:_0DCD126102C182434AC9C529076EE04A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E8C73E3E22D4E04E718AA4CC53347820"
-        "OwnerKey" = "8:_C4A1841B6D19D052F61A23D0A9E99BDB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -592,31 +556,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_787E16B20CFF422BED6FAED4DCF059E0"
+        "OwnerKey" = "8:_77CDA1C97BD3A288782FE166D454FC96"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_27622BC878BB2ADAB111B5B9DC7BF2D4"
+        "OwnerKey" = "8:_E70480649D82B4ED1B2163DCA531E277"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_92237A3ED42C1EC2328AF60A919914DE"
+        "OwnerKey" = "8:_7BAAAB7F29FE7CADEF162C28CFA8EE4E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C4A1841B6D19D052F61A23D0A9E99BDB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9CFED393B6C1748C630F66B0A031A905"
+        "OwnerKey" = "8:_320D9B355AEA2228ABB4ED4614503002"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -780,7 +738,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\ForefrontSetup.msi"
+        "OutputFilename" = "8:Release\\DansposéSetup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -987,37 +945,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_27622BC878BB2ADAB111B5B9DC7BF2D4"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:VistaApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_27622BC878BB2ADAB111B5B9DC7BF2D4"
-                    {
-                    "Name" = "8:VistaApi.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:VistaApi.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2C7BEF06BBCCF7557E95D3930CC70D87"
             {
             "AssemblyRegister" = "3:1"
@@ -1080,10 +1007,21 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3B41CCFCF5AA4132A484CB9EDF7852DC"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_320D9B355AEA2228ABB4ED4614503002"
             {
-            "SourcePath" = "8:..\\ForefrontLauncher\\Resources\\ForefrontIcon.ico"
-            "TargetName" = "8:ForefrontIcon.ico"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Dansposé, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_320D9B355AEA2228ABB4ED4614503002"
+                    {
+                    "Name" = "8:Dansposé.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Dansposé.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
             "Condition" = "8:"
@@ -1097,7 +1035,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3F2742FAD6C82B9932A18C8342D73F6C"
@@ -1193,26 +1131,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_637877BB0F5E400FB7AD7CACB56EBC78"
-            {
-            "SourcePath" = "8:..\\ForefrontLauncher\\Settings.xml"
-            "TargetName" = "8:Settings.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7665815CF508FD7B00EFEE16787C314B"
             {
             "AssemblyRegister" = "3:1"
@@ -1244,14 +1162,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_787E16B20CFF422BED6FAED4DCF059E0"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_77CDA1C97BD3A288782FE166D454FC96"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Interop.Shell32, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_787E16B20CFF422BED6FAED4DCF059E0"
+                    "_77CDA1C97BD3A288782FE166D454FC96"
                     {
                     "Name" = "8:Interop.Shell32.dll"
                     "Attributes" = "3:512"
@@ -1303,6 +1221,37 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7BAAAB7F29FE7CADEF162C28CFA8EE4E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Triggers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_7BAAAB7F29FE7CADEF162C28CFA8EE4E"
+                    {
+                    "Name" = "8:Triggers.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Triggers.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -1368,21 +1317,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_92237A3ED42C1EC2328AF60A919914DE"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_907C3C8059314125A00A6BE8FD119275"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:GlobalHooking.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_92237A3ED42C1EC2328AF60A919914DE"
-                    {
-                    "Name" = "8:GlobalHooking.Net.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:GlobalHooking.Net.dll"
-            "TargetName" = "8:"
+            "SourcePath" = "8:..\\DansposéLauncher\\Settings.xml"
+            "TargetName" = "8:Settings.xml"
             "Tag" = "8:"
             "Folder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
             "Condition" = "8:"
@@ -1396,24 +1334,13 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9CFED393B6C1748C630F66B0A031A905"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AAC193CF7B764A5588F34F11D603C28D"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Forefront, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_9CFED393B6C1748C630F66B0A031A905"
-                    {
-                    "Name" = "8:Forefront.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Forefront.dll"
-            "TargetName" = "8:"
+            "SourcePath" = "8:..\\DansposéLauncher\\Resources\\DansposéIcon.ico"
+            "TargetName" = "8:DansposéIcon.ico"
             "Tag" = "8:"
             "Folder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
             "Condition" = "8:"
@@ -1427,7 +1354,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AD6E3E69C21DEB85697B4179EEE3F213"
@@ -1458,37 +1385,6 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C4A1841B6D19D052F61A23D0A9E99BDB"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:GlobalTriggers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_C4A1841B6D19D052F61A23D0A9E99BDB"
-                    {
-                    "Name" = "8:GlobalTriggers.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:GlobalTriggers.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -1571,6 +1467,37 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E70480649D82B4ED1B2163DCA531E277"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:VistaApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_E70480649D82B4ED1B2163DCA531E277"
+                    {
+                    "Name" = "8:VistaApi.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:VistaApi.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -1715,7 +1642,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_1A5CA7168C6E461781BBEB4F98EF6133"
                     {
-                    "Name" = "8:Forefront"
+                    "Name" = "8:Dansposé"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -1774,9 +1701,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Forefront"
+        "ProductName" = "8:Dansposé"
         "ProductCode" = "8:{B081F32E-AA5F-423C-9DF1-A4CE1C2FB598}"
-        "PackageCode" = "8:{95CB3EBE-6C3E-49F7-A3D5-D55CA9E39414}"
+        "PackageCode" = "8:{BE163D8D-8A91-4939-AB16-3FE1CC3993F0}"
         "UpgradeCode" = "8:{398B9D17-A4E5-456F-927E-513DC2C6FB72}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
@@ -1786,7 +1713,7 @@
         "Manufacturer" = "8:Firestorm Software"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:VistaExposeSetup"
+        "Title" = "8:DansposéSetup"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Dan Janosik"
         "Keywords" = "8:"
@@ -1897,7 +1824,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_17989051FB344D4D96E144672CED19C8"
             {
-            "Name" = "8:Forefront"
+            "Name" = "8:Dansposé"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -1906,12 +1833,12 @@
             "Target" = "8:_C83A823711C345268F8309C836CDFC98"
             "Folder" = "8:_1A5CA7168C6E461781BBEB4F98EF6133"
             "WorkingFolder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
-            "Icon" = "8:_3B41CCFCF5AA4132A484CB9EDF7852DC"
+            "Icon" = "8:_AAC193CF7B764A5588F34F11D603C28D"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A3245F9335674FD39F2A6099E0B44344"
             {
-            "Name" = "8:Forefront"
+            "Name" = "8:Dansposé"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -1920,7 +1847,7 @@
             "Target" = "8:_C83A823711C345268F8309C836CDFC98"
             "Folder" = "8:_5677F35867F144E4B21C1D7033AC5CB4"
             "WorkingFolder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
-            "Icon" = "8:_3B41CCFCF5AA4132A484CB9EDF7852DC"
+            "Icon" = "8:_AAC193CF7B764A5588F34F11D603C28D"
             "Feature" = "8:"
             }
         }
@@ -2324,7 +2251,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A4E47EF822C74DB5A6E97294D6572DDB"
             {
-            "SourcePath" = "8:..\\ForefrontInitialLaunch\\obj\\Release\\ForefrontInitialLaunch.dll"
+            "SourcePath" = "8:..\\DansposéInitialLaunch\\obj\\Release\\DansposéInitialLaunch.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
@@ -2352,7 +2279,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C83A823711C345268F8309C836CDFC98"
             {
-            "SourcePath" = "8:..\\ForefrontLauncher\\obj\\Release\\ForefrontLauncher.exe"
+            "SourcePath" = "8:..\\DansposéLauncher\\obj\\Release\\DansposéLauncher.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_91AE2614BFCC4B24869E0B8F3DF19AE6"
