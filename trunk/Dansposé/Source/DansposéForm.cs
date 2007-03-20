@@ -136,18 +136,6 @@ namespace Dansposé {
 			}
 		}
 
-		private string[] LoadGroups() {
-			List<string> groups = new List<string>();
-			string[] lines = File.ReadAllLines(System.Windows.Forms.Application.StartupPath + "\\Configuration.txt");
-			foreach ( string line in lines ) {
-				if ( line.StartsWith("Group") ) {
-					groups.Add(line.Substring(line.IndexOf(" ") + 1));
-				}
-			}
-
-			return groups.ToArray();
-		}
-
 		protected override void OnShown(EventArgs e) {
 			base.OnShown(e);
 
@@ -165,6 +153,7 @@ namespace Dansposé {
 			this.fSecondaryWindowManager.UnregisterAll();
 
 			if ( !this.fFocusedOnGroup ) {
+				this.Hide();
 				this.fWindowManager.RefreshWindows();
 				if ( this.fWindowManager.ObjectCount == 1 ) {
 					this.Hide();
@@ -200,13 +189,13 @@ namespace Dansposé {
 					VistaWindow vw = (VistaWindow)windowManager[i];
 					this.fWindowTransitions.Add(new WindowPositionTransition(
 						vw,
-						vw.InitialRectangle,
+						vw.IsMinimized ? Utility.GetCenterRect(vw.Rectangle) : vw.InitialRectangle,
 						vw.Rectangle));
 				} else if ( windowManager[i] is VistaWindowGroup ) {
 					foreach ( VistaWindow vw in ((VistaWindowGroup)windowManager[i]).Windows ) {
 						this.fWindowTransitions.Add(new WindowPositionTransition(
 						vw,
-						vw.InitialRectangle,
+						vw.IsMinimized ? Utility.GetCenterRect(vw.Rectangle) : vw.InitialRectangle,
 						vw.Rectangle));
 					}	
 				}
