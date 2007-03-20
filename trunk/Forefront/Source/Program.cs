@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Forefront {
+namespace Dansposé {
 	
 	public static class Program {
 
 		[STAThread]
 		public static void Main() {
-			ForefrontForm form = new ForefrontForm();
+			DansposéForm form = new DansposéForm();
 
 			try {
 

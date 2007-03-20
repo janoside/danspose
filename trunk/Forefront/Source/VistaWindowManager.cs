@@ -5,7 +5,7 @@ using System.Drawing;
 
 using VistaDwmApi;
 
-namespace Forefront {
+namespace Dansposé {
 	
 	public class VistaWindowManager {
 

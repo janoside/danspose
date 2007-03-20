@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Forefront {
+namespace Dansposé {
 	
 	public interface ITransition {
 

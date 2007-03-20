@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 
-namespace Forefront {
+namespace Dansposé {
 	
 	public static class GdiUtil {
 

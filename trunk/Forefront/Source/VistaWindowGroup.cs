@@ -4,7 +4,7 @@ using System.Text;
 
 using VistaDwmApi;
 
-namespace Forefront {
+namespace Dansposé {
 	
 	public class VistaWindowGroup {
 

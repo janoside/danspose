@@ -12,9 +12,9 @@ using VistaDwmApi;
 
 using Triggers;
 
-namespace Forefront {
+namespace Dansposé {
 
-	public class ForefrontForm : Form {
+	public class DansposéForm : Form {
 
 		private VistaWindowManager fWindowManager;
 
@@ -42,7 +42,7 @@ namespace Forefront {
 
 		private bool fSkipShow;
 
-		public ForefrontForm() {
+		public DansposéForm() {
 			this.fWindowManager = new VistaWindowManager(
 				new IntPtr[] { this.Handle },
 				new string[] { });
