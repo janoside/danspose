@@ -34,6 +34,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
@@ -46,6 +48,7 @@
     <Compile Include="Source\Rect.cs" />
     <Compile Include="Source\User32.cs" />
     <Compile Include="Source\VistaDwm.cs" />
+    <Compile Include="Source\VistaGlass.cs" />
     <Compile Include="Source\VistaWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
