@@ -153,7 +153,6 @@ namespace Dansposé {
 			this.fSecondaryWindowManager.UnregisterAll();
 
 			if ( !this.fFocusedOnGroup ) {
-				this.Hide();
 				this.fWindowManager.RefreshWindows();
 				if ( this.fWindowManager.ObjectCount == 1 ) {
 					this.Hide();
@@ -210,7 +209,7 @@ namespace Dansposé {
 				textRect.Y,
 				textRect.Width + 2 * x,
 				textRect.Height,
-				textRect.Height / 2.0f);
+				4);//				textRect.Height / 2.0f);
 
 			g.FillPath(
 				Brushes.White, 
@@ -299,7 +298,9 @@ namespace Dansposé {
 
 			Graphics g = e.Graphics;
 
-			this.DrawLabels(g);
+			if ( !this.fAnimating ) {
+				this.DrawLabels(g);
+			}
 
 			this.fAnimation.Update();
 			foreach ( ITransition transition in this.fWindowTransitions ) {
