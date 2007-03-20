@@ -1,5 +1,5 @@
 
-namespace ForefrontLauncher {
+namespace DansposéLauncher {
 
 	partial class EditGroupForm {
 

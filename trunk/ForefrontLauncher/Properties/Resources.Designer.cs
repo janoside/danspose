@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ForefrontLauncher.Properties {
+namespace DansposéLauncher.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ForefrontLauncher.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ForefrontLauncher.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DansposéLauncher.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -74,16 +74,16 @@ namespace ForefrontLauncher.Properties {
             }
         }
         
-        internal static System.Drawing.Icon ForefrontIcon {
+        internal static System.Drawing.Icon DansposéIcon {
             get {
-                object obj = ResourceManager.GetObject("ForefrontIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("DansposéIcon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
         
-        internal static System.Drawing.Icon ForefrontIconSmall {
+        internal static System.Drawing.Icon DansposéIconSmall {
             get {
-                object obj = ResourceManager.GetObject("ForefrontIconSmall", resourceCulture);
+                object obj = ResourceManager.GetObject("DansposéIconSmall", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

@@ -6,10 +6,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-using Forefront;
-using ForefrontLauncher;
+using Dansposé;
+using DansposéLauncher;
 
-namespace ForefrontLauncher {
+namespace DansposéLauncher {
 
 	public partial class SettingsForm : Form {
 

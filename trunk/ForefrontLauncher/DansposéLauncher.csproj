@@ -4,8 +4,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7F0DF821-79EB-4707-B775-792E5DB791C1}</ProjectGuid>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <RootNamespace>ForefrontLauncher</RootNamespace>
-    <AssemblyName>ForefrontLauncher</AssemblyName>
+    <RootNamespace>DansposéLauncher</RootNamespace>
+    <AssemblyName>DansposéLauncher</AssemblyName>
     <WarningLevel>4</WarningLevel>
     <OutputType>winexe</OutputType>
     <MinFrameworkVersionRequired>3.0</MinFrameworkVersionRequired>
@@ -22,8 +22,8 @@
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <PublishUrl>Publish\</PublishUrl>
-    <ApplicationIcon>Resources\ForefrontIcon.ico</ApplicationIcon>
-    <StartupObject>ForefrontLauncher.Program</StartupObject>
+    <ApplicationIcon>Resources\DansposéIcon.ico</ApplicationIcon>
+    <StartupObject>DansposéLauncher.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -137,9 +137,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Forefront\Forefront.csproj">
+    <ProjectReference Include="..\Dansposé\Dansposé.csproj">
       <Project>{0C3757D6-BC9B-4EBA-9EE3-689E7EC43A83}</Project>
-      <Name>Forefront</Name>
+      <Name>Dansposé</Name>
     </ProjectReference>
     <ProjectReference Include="..\Triggers\Triggers.csproj">
       <Project>{F5957991-1288-429D-B5A4-1A41E0F44F4C}</Project>
@@ -164,6 +164,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SelectedGradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DansposéIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DansposéIconSmall.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildBinPath)\Microsoft.WinFX.targets" />

@@ -1,4 +1,4 @@
-namespace ForefrontLauncher {
+namespace DansposéLauncher {
 	partial class AboutForm {
 		/// <summary>
 		/// Required designer variable.
@@ -62,7 +62,7 @@ namespace ForefrontLauncher {
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(81, 21);
 			this.label1.TabIndex = 2;
-			this.label1.Text = "Forefront";
+			this.label1.Text = "Dansposé";
 			// 
 			// label2
 			// 
@@ -112,7 +112,7 @@ namespace ForefrontLauncher {
 			this.Name = "AboutForm";
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "About Forefront";
+			this.Text = "About Dansposé";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

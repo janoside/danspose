@@ -3,7 +3,7 @@ using System.Windows;
 using System.Data;
 using System.Xml;
 using System.Configuration;
-using ForefrontLauncher.Properties;
+using DansposéLauncher.Properties;
 using System.Reflection;
 using System.IO;
 using System.Windows.Forms;
@@ -13,25 +13,25 @@ using Triggers;
 
 using VistaDwmApi;
 
-using Forefront;
+using Dansposé;
 
-namespace ForefrontLauncher {
+namespace DansposéLauncher {
 
 	public partial class Launcher : System.Windows.Application {
 
-		private ForefrontForm fForm;
+		private DansposéForm fForm;
 
 		private NotifyIcon fTrayIcon;
 
 		public Launcher() {
-			this.fForm = new ForefrontForm();
+			this.fForm = new DansposéForm();
 
 			this.fTrayIcon = new NotifyIcon();
-			this.fTrayIcon.Text = "Forefront: Running";
-			this.fTrayIcon.Icon = ForefrontLauncher.Properties.Resources.ForefrontIconSmall;
-			this.fTrayIcon.BalloonTipText = "To exit Forefront, right click on this icon and click exit";
+			this.fTrayIcon.Text = "Dansposé: Running";
+			this.fTrayIcon.Icon = DansposéLauncher.Properties.Resources.DansposéIconSmall;
+			this.fTrayIcon.BalloonTipText = "To exit Dansposé, right click on this icon and click exit";
 			this.fTrayIcon.BalloonTipIcon = ToolTipIcon.Info;
-			this.fTrayIcon.BalloonTipTitle = "Forefront is running";
+			this.fTrayIcon.BalloonTipTitle = "Dansposé is running";
 
 			ContextMenu menu = new ContextMenu();
 
@@ -48,7 +48,7 @@ namespace ForefrontLauncher {
 			activeItem.Click += delegate {
 				this.fForm.TriggerManager.IsActive = !this.fForm.TriggerManager.IsActive;
 				activeItem.Text = (this.fForm.TriggerManager.IsActive ? "Disable" : "Enable");
-				this.fTrayIcon.Text = (this.fForm.TriggerManager.IsActive ? "Forefront: Running" : "Forefront: Disabled");
+				this.fTrayIcon.Text = (this.fForm.TriggerManager.IsActive ? "Dansposé: Running" : "Dansposé: Disabled");
 			};
 			exitItem.Click += delegate {
 				this.fTrayIcon.Visible = false;
@@ -58,7 +58,7 @@ namespace ForefrontLauncher {
 			this.fTrayIcon.ContextMenu = menu;
 		}
 
-		public ForefrontForm ForefrontForm {
+		public DansposéForm DansposéForm {
 			get {
 				return this.fForm;
 			}

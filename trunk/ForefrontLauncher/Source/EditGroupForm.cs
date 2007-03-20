@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ForefrontLauncher {
+namespace DansposéLauncher {
 
 	public partial class EditGroupForm : Form {
 

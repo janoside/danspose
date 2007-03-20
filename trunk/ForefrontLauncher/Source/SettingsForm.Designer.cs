@@ -1,4 +1,4 @@
-namespace ForefrontLauncher {
+namespace DansposéLauncher {
 	partial class SettingsForm {
 		/// <summary>
 		/// Required designer variable.
@@ -557,7 +557,7 @@ namespace ForefrontLauncher {
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(466, 36);
 			this.label8.TabIndex = 2;
-			this.label8.Text = "Triggers activate Forefront\'s window-selection mode.  Create any number of key-pr" +
+			this.label8.Text = "Triggers activate Dansposé\'s window-selection mode.  Create any number of key-pr" +
 				"ess or mouse-in-corner triggers as you desire.";
 			// 
 			// ToolStripTriggers
@@ -637,7 +637,7 @@ namespace ForefrontLauncher {
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Forefront Settings";
+			this.Text = "Dansposé Settings";
 			((System.ComponentModel.ISupportInitialize)(this.ValueAnimationLength)).EndInit();
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage4.ResumeLayout(false);

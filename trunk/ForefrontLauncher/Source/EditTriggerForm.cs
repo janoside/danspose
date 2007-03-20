@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 using Triggers;
 
-namespace ForefrontLauncher {
+namespace DansposéLauncher {
 
 	public partial class EditTriggerForm : Form {
 

@@ -6,7 +6,7 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace ForefrontLauncher {
+namespace DansposéLauncher {
 
 	public static class SerializationUtility {
 
