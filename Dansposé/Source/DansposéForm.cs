@@ -186,16 +186,29 @@ namespace Dansposé {
 			for ( int i = 0; i < windowManager.ObjectCount; i++ ) {
 				if ( windowManager[i] is VistaWindow ) {
 					VistaWindow vw = (VistaWindow)windowManager[i];
+
+					Rect initialRect = vw.InitialRectangle;
+					if ( windowManager == this.fWindowManager && vw.IsMinimized ) {
+						initialRect = Utility.GetCenterRect(vw.Rectangle);
+					}
+
 					this.fWindowTransitions.Add(new WindowPositionTransition(
 						vw,
-						vw.IsMinimized ? Utility.GetCenterRect(vw.Rectangle) : vw.InitialRectangle,
+						initialRect,
 						vw.Rectangle));
+
 				} else if ( windowManager[i] is VistaWindowGroup ) {
+
 					foreach ( VistaWindow vw in ((VistaWindowGroup)windowManager[i]).Windows ) {
+						Rect initialRect = vw.InitialRectangle;
+						if ( windowManager == this.fWindowManager && vw.IsMinimized ) {
+							initialRect = Utility.GetCenterRect(vw.Rectangle);
+						}
+
 						this.fWindowTransitions.Add(new WindowPositionTransition(
-						vw,
-						vw.IsMinimized ? Utility.GetCenterRect(vw.Rectangle) : vw.InitialRectangle,
-						vw.Rectangle));
+							vw,
+							initialRect,
+							vw.Rectangle));
 					}	
 				}
 			}
