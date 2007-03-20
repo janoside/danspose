@@ -24,5 +24,13 @@ namespace Dansposé {
 				rect.X + rect.Width,
 				rect.Y + rect.Height);
 		}
+
+		public static Rect GetCenterRect(Rect rect) {
+			return new Rect(
+				(rect.Left + rect.Right) / 2, 
+				(rect.Top + rect.Bottom) / 2, 
+				(rect.Left + rect.Right) / 2, 
+				(rect.Top + rect.Bottom) / 2);
+		}
 	}
 }

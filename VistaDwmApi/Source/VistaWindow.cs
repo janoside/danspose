@@ -44,6 +44,8 @@ namespace VistaDwmApi {
 
 		private long fApplicationInstance;
 
+		private bool fIsMinimized;
+
 		public VistaWindow(IntPtr handle, string title) {
 			this.fHandle = handle;
 			this.fTitle = VistaWindow.GetTitle(title);
@@ -52,6 +54,7 @@ namespace VistaDwmApi {
 			this.fScaledSize = new PSize();
 			this.fRectangle = new Rect(0, 0, 0, 0);
 			User32.GetWindowRect(this.Handle, ref this.fInitialRectangle);
+			this.fIsMinimized = (this.fInitialRectangle.Left == -32000 && this.fInitialRectangle.Top == -32000);
 			this.fApplicationInstance = User32.GetWindowLong(this.Handle, VistaDwm.GWL_HINSTANCE);
 			
 			this.fThumbnailProperties = new ThumbnailProperties();
@@ -71,18 +74,6 @@ namespace VistaDwmApi {
 			}
 			set {
 				this.fIndexPointer = value;
-			}
-		}
-
-		public long ApplicationInstance {
-			get {
-				return this.fApplicationInstance;
-			}
-		}
-
-		public string Title {
-			get {
-				return this.fTitle;
 			}
 		}
 
@@ -117,6 +108,18 @@ namespace VistaDwmApi {
 			}
 		}
 
+		public string Title {
+			get {
+				return this.fTitle;
+			}
+		}
+
+		public long ApplicationInstance {
+			get {
+				return this.fApplicationInstance;
+			}
+		}
+
 		public float Opacity {
 			get {
 				return this.fOpacity;
@@ -136,6 +139,7 @@ namespace VistaDwmApi {
 
 		public bool IsMinimized {
 			get {
+				return this.fIsMinimized;
 				long style = User32.GetWindowLong(this.fHandle, VistaDwm.GWL_STYLE);
 				return (((ulong)style & VistaDwm.WS_MINIMIZE) == VistaDwm.WS_MINIMIZE);
 			}
