@@ -7,8 +7,8 @@
     <ProjectGuid>{CFED592C-AE16-4176-9E6F-D024DDE288AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ForefrontInitialLaunch</RootNamespace>
-    <AssemblyName>ForefrontInitialLaunch</AssemblyName>
+    <RootNamespace>DansposéInitialLaunch</RootNamespace>
+    <AssemblyName>DansposéInitialLaunch</AssemblyName>
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
@@ -49,6 +49,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -59,11 +60,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Source\Installer1.cs">
+    <Compile Include="Source\DansposéInstallerLaunch.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Source\Installer1.Designer.cs">
-      <DependentUpon>Installer1.cs</DependentUpon>
+    <Compile Include="Source\DansposéInstallerLaunch.Designer.cs">
+      <DependentUpon>DansposéInstallerLaunch.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

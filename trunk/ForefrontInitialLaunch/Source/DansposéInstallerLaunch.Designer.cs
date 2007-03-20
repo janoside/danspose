@@ -1,7 +1,7 @@
 
-namespace ForefrontInitialLaunch {
+namespace DansposéInitialLaunch {
 
-	partial class Installer1 {
+	partial class DansposéInstallerLaunch {
 
 		/// <summary>
 		/// Required designer variable.

@@ -4,19 +4,19 @@ using System.ComponentModel;
 using System.Configuration.Install;
 using System.Diagnostics;
 
-namespace ForefrontInitialLaunch {
+namespace DansposéInitialLaunch {
 
 	[RunInstaller(true)]
-	public partial class Installer1 : Installer {
+	public partial class DansposéInstallerLaunch : Installer {
 
-		public Installer1() {
+		public DansposéInstallerLaunch() {
 			InitializeComponent();
 		}
 
 		public override void Commit(System.Collections.IDictionary savedState) {
 			base.Commit(savedState);
 
-			Process.Start("V:\\Program Files\\Forefront\\ForefrontLauncher.exe");
+			Process.Start(Environment.SystemDirectory.Substring(0, 3) + "Program Files\\Dansposé\\DansposéLauncher.exe");
 		}
 	}
 }
