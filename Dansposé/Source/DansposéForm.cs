@@ -424,7 +424,7 @@ namespace Dansposé {
 
 		private void EndExpose() {
 			VistaWindowManager windowManager = (this.fFocusedOnGroup ? this.fSecondaryWindowManager : this.fWindowManager);
-			//this.Hide();
+
 			for ( int i = 0; i < windowManager.ObjectCount; i++ ) {
 				if ( windowManager[i] is VistaWindow ) {
 					VistaWindow vw = (VistaWindow)windowManager[i];

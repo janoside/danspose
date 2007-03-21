@@ -139,7 +139,7 @@ namespace VistaDwmApi {
 
 		public bool IsMinimized {
 			get {
-				return this.fIsMinimized;
+			//	return this.fIsMinimized;
 				long style = User32.GetWindowLong(this.fHandle, VistaDwm.GWL_STYLE);
 				return (((ulong)style & VistaDwm.WS_MINIMIZE) == VistaDwm.WS_MINIMIZE);
 			}
