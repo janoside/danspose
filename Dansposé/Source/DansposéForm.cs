@@ -42,6 +42,8 @@ namespace Dansposé {
 
 		private bool fSkipShow;
 
+		private bool fStartAnimation;
+
 		public DansposéForm() {
 			this.fWindowManager = new VistaWindowManager(
 				new IntPtr[] { this.Handle },
@@ -79,6 +81,7 @@ namespace Dansposé {
 			this.fEnding = false;
 			this.fAnimating = false;
 			this.fSkipShow = false;
+			this.fStartAnimation = false;
 			this.fThumbnailOpacity = 0.5f;
 			this.fBackgroundOpacity = 0.2f;
 
@@ -88,15 +91,17 @@ namespace Dansposé {
 
 			this.fAnimation = new Animation(0.2f);
 			this.fAnimation.Completed += delegate {
-				foreach ( ITransition transition in this.fWindowTransitions ) {
-					transition.End();
-				}
 				this.fAnimating = false;
-				this.fWindowTransitions.Clear();
 
 				if ( this.fEnding ) {
 					this.Hide();
+				} else {
+					foreach ( ITransition transition in this.fWindowTransitions ) {
+						transition.End();
+					}
 				}
+
+				this.fWindowTransitions.Clear();
 			};
 		}
 
@@ -145,7 +150,7 @@ namespace Dansposé {
 		}
 
 		protected override void OnLoad(EventArgs e) {
-			base.OnLoad(e);
+			//base.OnLoad(e);
 
 			this.fSkipShow = false;
 
@@ -163,6 +168,7 @@ namespace Dansposé {
 
 			this.fAnimation.Start();
 			this.fAnimating = true;
+			this.fStartAnimation = true;
 
 			this.fWindowManager.DesktopWindow.Opacity = this.fBackgroundOpacity;
 			this.fWindowManager.DesktopWindow.Rectangle = new Rect(
@@ -227,6 +233,8 @@ namespace Dansposé {
 			g.FillPath(
 				Brushes.White, 
 				roundedRect);
+
+			//g.FillRectangle(Brushes.White, textRect);
 		}
 
 		private void DrawLabels(Graphics g) {
@@ -305,7 +313,7 @@ namespace Dansposé {
 		}
 
 		protected override void OnPaint(PaintEventArgs e) {
-			base.OnPaint(e);
+			//base.OnPaint(e);
 
 			e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
 
@@ -373,7 +381,7 @@ namespace Dansposé {
 						this.SelectWindow((VistaWindow)this.fSelectedObject);
 					}
 				} else {
-					this.EndExpose();
+					this.EndExpose(null);
 				}
 			} else if ( e.Button == MouseButtons.Right ) {
 				
@@ -422,22 +430,45 @@ namespace Dansposé {
 			}
 		}
 
-		private void EndExpose() {
+		private void EndExpose(VistaWindow selectedWindow) {
 			VistaWindowManager windowManager = (this.fFocusedOnGroup ? this.fSecondaryWindowManager : this.fWindowManager);
+
+			Rect endRect = new Rect();
+			User32.GetWindowRect(selectedWindow.Handle, ref endRect);
+			this.fWindowTransitions.Add(new WindowPositionTransition(
+				selectedWindow,
+				selectedWindow.Rectangle,
+				endRect));
 
 			for ( int i = 0; i < windowManager.ObjectCount; i++ ) {
 				if ( windowManager[i] is VistaWindow ) {
 					VistaWindow vw = (VistaWindow)windowManager[i];
-					this.fWindowTransitions.Add(new WindowPositionTransition(
-						vw,
-						vw.Rectangle,
-						this.fWindowManager.GetOriginalLocation(vw)));
+					if ( vw != selectedWindow ) {
+						if ( vw.IsMinimized ) {
+							// dont animate unnecessarily
+							vw.Opacity = 0;
+
+						} else {
+							this.fWindowTransitions.Add(new WindowPositionTransition(
+								vw,
+								vw.Rectangle,
+								this.fWindowManager.GetOriginalLocation(vw)));
+						}
+					}
 				} else if ( windowManager[i] is VistaWindowGroup ) {
 					foreach ( VistaWindow vw in ((VistaWindowGroup)windowManager[i]).Windows ) {
-						this.fWindowTransitions.Add(new WindowPositionTransition(
-							vw,
-							vw.Rectangle,
-							this.fWindowManager.GetOriginalLocation(vw)));
+						if ( vw != selectedWindow ) {
+							if ( vw.IsMinimized ) {
+								// dont animate unnecessarily
+								vw.Opacity = 0;
+
+							} else {
+								this.fWindowTransitions.Add(new WindowPositionTransition(
+									vw,
+									vw.Rectangle,
+									this.fWindowManager.GetOriginalLocation(vw)));
+							}
+						}
 					}
 				}
 			}
@@ -450,8 +481,6 @@ namespace Dansposé {
 			vw.Opacity = 1;
 			vw.BringToFront(this.Handle);
 
-			this.EndExpose();
-
 			if ( vw.IsMinimized ) {
 				User32.ShowWindow(vw.Handle, VistaDwm.SW_RESTORE);
 			} else {
@@ -462,6 +491,8 @@ namespace Dansposé {
 					User32.SetFocus(vw.Handle);
 				}
 			}
+
+			this.EndExpose(vw);
 		}
 
 		public void SetGroups(IEnumerable<string> groups) {

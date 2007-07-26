@@ -29,7 +29,7 @@ namespace Dansposé {
 						(int)(this.fStartRect.Right * (1 - value) + this.fEndRect.Right * value),
 						(int)(this.fStartRect.Bottom * (1 - value) + this.fEndRect.Bottom * value));
 
-					this.fWindow.UpdateThumbnail();
+					//this.fWindow.UpdateThumbnail();
 				}
 			}
 		}

@@ -28,7 +28,7 @@ namespace DansposéLauncher {
 
 			this.fTrayIcon = new NotifyIcon();
 			this.fTrayIcon.Text = "Dansposé: Running";
-			this.fTrayIcon.Icon = DansposéLauncher.Properties.Resources.DansposéIconSmall;
+			this.fTrayIcon.Icon = DansposéLauncher.Properties.Resources.Icon;
 			this.fTrayIcon.BalloonTipText = "To exit Dansposé, right click on this icon and click exit";
 			this.fTrayIcon.BalloonTipIcon = ToolTipIcon.Info;
 			this.fTrayIcon.BalloonTipTitle = "Dansposé is running";

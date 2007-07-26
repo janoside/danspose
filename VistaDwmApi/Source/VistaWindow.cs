@@ -48,18 +48,26 @@ namespace VistaDwmApi {
 
 		public VistaWindow(IntPtr handle, string title) {
 			this.fHandle = handle;
-			this.fTitle = VistaWindow.GetTitle(title);
 			this.fOpacity = 1;
 
 			this.fScaledSize = new PSize();
 			this.fRectangle = new Rect(0, 0, 0, 0);
-			User32.GetWindowRect(this.Handle, ref this.fInitialRectangle);
-			this.fIsMinimized = (this.fInitialRectangle.Left == -32000 && this.fInitialRectangle.Top == -32000);
 			this.fApplicationInstance = User32.GetWindowLong(this.Handle, VistaDwm.GWL_HINSTANCE);
 			
 			this.fThumbnailProperties = new ThumbnailProperties();
 			this.fThumbnailProperties.fVisible = true;
 			this.fThumbnailProperties.dwFlags = VistaDwm.DWM_TNP_VISIBLE | VistaDwm.DWM_TNP_RECTDESTINATION | VistaDwm.DWM_TNP_OPACITY;
+
+			this.RefreshVisibleProperties(title);
+		}
+
+		/// <summary>
+		/// Used when the VistaWindow needs to poll any visible properties.
+		/// </summary>
+		public void RefreshVisibleProperties(string title) {
+			this.fTitle = VistaWindow.GetTitle(title);
+			User32.GetWindowRect(this.Handle, ref this.fInitialRectangle);
+			this.fIsMinimized = (this.fInitialRectangle.Left == -32000 && this.fInitialRectangle.Top == -32000);
 		}
 
 		public IntPtr Handle {

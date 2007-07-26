@@ -24,14 +24,14 @@ namespace Dansposé {
 			set {
 				if ( value >= 0 && value <= 1 ) {
 					this.fWindow.Opacity = this.fStartOpacity * (1 - value) + this.fEndOpacity * value;
-					this.fWindow.UpdateThumbnail();
+					//this.fWindow.UpdateThumbnail();
 				}
 			}
 		}
 
 		public void End() {
 			this.fWindow.Opacity = this.fEndOpacity;
-			this.fWindow.UpdateThumbnail();
+			//this.fWindow.UpdateThumbnail();
 		}
 	}
 }
