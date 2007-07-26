@@ -28,30 +28,43 @@ namespace VistaDwmApi {
 
 		#endregion
 
-		private static List<VistaWindow> cachedWindows;
+		private static List<VistaWindow> windowList = new List<VistaWindow>(20);
+
+		private static Dictionary<IntPtr, VistaWindow> cachedWindows = new Dictionary<IntPtr,VistaWindow>();
+
+		private static StringBuilder titleBuilder = new StringBuilder(200);
 
 		public static VistaWindow[] GetVisibleWindows() {
-			cachedWindows = new List<VistaWindow>();
+			windowList.Clear();
 			User32.EnumWindows(EnumWindowCallback, 0);
 
-			cachedWindows.Sort(delegate(VistaWindow vw1, VistaWindow vw2) {
+			windowList.Sort(delegate(VistaWindow vw1, VistaWindow vw2) {
 				return vw1.Title.CompareTo(vw2.Title);
 			});
 
-			return cachedWindows.ToArray();
+			return windowList.ToArray();
 		}
 
 		private static bool EnumWindowCallback(IntPtr hwnd, int lParam) {
 			if ( /*hwnd != fExposéWindowHandle &&*/ (User32.GetWindowLongA(hwnd, VistaDwm.GWL_STYLE) & VistaDwm.WS_VISIBLE) == VistaDwm.WS_VISIBLE ) {
-				StringBuilder sb = new StringBuilder(1000);
-				User32.GetWindowText(hwnd, sb, sb.Capacity);
+				User32.GetWindowText(hwnd, titleBuilder, titleBuilder.Capacity);
 
-				if ( sb.ToString() == "Program Manager" || (User32.GetWindowLongA(hwnd, VistaDwm.GWL_STYLE) & VistaDwm.WS_VISIBLE) == VistaDwm.WS_VISIBLE ) {
+				if ( titleBuilder.ToString() == "Program Manager" || (User32.GetWindowLongA(hwnd, VistaDwm.GWL_STYLE) & VistaDwm.WS_VISIBLE) == VistaDwm.WS_VISIBLE ) {
 
-					VistaWindow window = new VistaWindow(hwnd, sb.ToString());
+					VistaWindow window;
+					if ( cachedWindows.ContainsKey(hwnd) ) {
+						window = cachedWindows[hwnd];
+
+						// we are pulling cached window so let it update visible properties
+						window.RefreshVisibleProperties(titleBuilder.ToString());
+					} else {
+						window = new VistaWindow(hwnd, titleBuilder.ToString());
+						cachedWindows.Add(hwnd, window);
+					}
+
 					IntPtr parentHwnd = User32.GetParent(hwnd);
 					if ( window.Title.Length > 0 && IsValidTitle(window.Title) && parentHwnd == IntPtr.Zero ) {
-						cachedWindows.Add(window);
+						windowList.Add(window);
 					}
 				}
 			}

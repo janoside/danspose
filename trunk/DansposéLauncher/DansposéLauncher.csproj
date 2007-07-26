@@ -22,7 +22,8 @@
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <PublishUrl>Publish\</PublishUrl>
-    <ApplicationIcon>Resources\DansposéIcon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
     <StartupObject>DansposéLauncher.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -151,16 +152,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ForefrontIconSmall.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ArrowUp.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ArrowDown.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ForefrontIcon.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SelectedGradient.png" />
@@ -170,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DansposéIconSmall.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildBinPath)\Microsoft.WinFX.targets" />

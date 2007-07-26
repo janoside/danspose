@@ -74,16 +74,9 @@ namespace DansposéLauncher.Properties {
             }
         }
         
-        internal static System.Drawing.Icon DansposéIcon {
+        internal static System.Drawing.Icon Icon {
             get {
-                object obj = ResourceManager.GetObject("DansposéIcon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Icon DansposéIconSmall {
-            get {
-                object obj = ResourceManager.GetObject("DansposéIconSmall", resourceCulture);
+                object obj = ResourceManager.GetObject("Icon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
