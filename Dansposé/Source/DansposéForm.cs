@@ -433,12 +433,14 @@ namespace Dansposé {
 		private void EndExpose(VistaWindow selectedWindow) {
 			VistaWindowManager windowManager = (this.fFocusedOnGroup ? this.fSecondaryWindowManager : this.fWindowManager);
 
-			Rect endRect = new Rect();
-			User32.GetWindowRect(selectedWindow.Handle, ref endRect);
-			this.fWindowTransitions.Add(new WindowPositionTransition(
-				selectedWindow,
-				selectedWindow.Rectangle,
-				endRect));
+			if ( selectedWindow != null ) {
+				Rect endRect = new Rect();
+				User32.GetWindowRect(selectedWindow.Handle, ref endRect);
+				this.fWindowTransitions.Add(new WindowPositionTransition(
+					selectedWindow,
+					selectedWindow.Rectangle,
+					endRect));
+			}
 
 			for ( int i = 0; i < windowManager.ObjectCount; i++ ) {
 				if ( windowManager[i] is VistaWindow ) {
