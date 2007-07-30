@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Dansposé</RootNamespace>
-    <AssemblyName>Dansposé</AssemblyName>
+    <AssemblyName>Dansposé.Common</AssemblyName>
     <StartupObject>
     </StartupObject>
   </PropertyGroup>

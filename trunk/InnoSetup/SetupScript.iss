@@ -8,13 +8,13 @@ AppPublisher=Firestorm Software
 AppPublisherURL=http://janoside.com
 AppSupportURL=http://janoside.com
 AppUpdatesURL=http://janoside.com
-DefaultDirName={pf}\Dansposé/1.1
+DefaultDirName={pf}\Dansposé\1.1
 DisableDirPage=yes
 DefaultGroupName=Dansposé
 LicenseFile=C:\Users\janoside\Desktop\GPL v2.txt
 OutputDir=C:\Users\janoside\Desktop\setup
-OutputBaseFilename=Danposé 1.1 Setup
-SetupIconFile=C:\Users\janoside\Desktop\danspose\DansposéLauncher\Resources\Icon.ico
+OutputBaseFilename=Dansposé 1.1 Setup
+SetupIconFile=C:\Users\janoside\Desktop\danspose\DansposéLauncher\Icon.ico
 Compression=lzma
 SolidCompression=yes
 
@@ -22,19 +22,18 @@ SolidCompression=yes
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "C:\Users\janoside\Desktop\danspose\DansposéLauncher\bin\Release\DansposéLauncher.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\janoside\Desktop\danspose\DansposéLauncher\bin\Release\Dansposé.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\janoside\Desktop\danspose\DansposéLauncher\bin\Release\Dansposé.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\janoside\Desktop\danspose\DansposéLauncher\bin\Release\Dansposé.Common.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\janoside\Desktop\danspose\DansposéLauncher\bin\Release\Interop.Shell32.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\janoside\Desktop\danspose\DansposéLauncher\bin\Release\Settings.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\janoside\Desktop\danspose\DansposéLauncher\bin\Release\Triggers.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\janoside\Desktop\danspose\DansposéLauncher\bin\Release\VistaApi.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\janoside\Desktop\danspose\DansposéLauncher\Resources\Icon.ico"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{group}\Dansposé"; Filename: "{app}\DansposéLauncher.exe"
+Name: "{group}\Dansposé"; Filename: "{app}\Dansposé.exe"
 Name: "{group}\{cm:UninstallProgram,Dansposé}"; Filename: "{uninstallexe}"
 
 [Run]
-Filename: "{app}\DansposéLauncher.exe"; Description: "{cm:LaunchProgram,Dansposé}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\Dansposé.exe"; Description: "{cm:LaunchProgram,Dansposé}"; Flags: nowait postinstall skipifsilent
 
