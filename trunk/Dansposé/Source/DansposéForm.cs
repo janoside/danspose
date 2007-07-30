@@ -45,6 +45,8 @@ namespace Dansposé {
 		private bool fStartAnimation;
 
 		public DansposéForm() {
+			this.TopMost = true;
+
 			this.fWindowManager = new VistaWindowManager(
 				new IntPtr[] { this.Handle },
 				new string[] { });
