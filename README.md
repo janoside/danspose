@@ -8,4 +8,5 @@ A key feature of Dansposé over Exposé is the ability to define application "gr
 
 ## Screenshots
 
-
+![Screenshot 1](http://www.janoside.com/wp-content/uploads/Forefront/Forefront1.jpg)
+![Screenshot 2](http://www.janoside.com/wp-content/uploads/Forefront/Forefront2.jpg)
